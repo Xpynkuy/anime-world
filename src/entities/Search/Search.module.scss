@@ -1,0 +1,103 @@
+.searchContainer {
+  position: relative;
+  width: 280px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .searchInput {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .resultsContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: var(--content-bg-color);
+    border: 1px solid gray;
+    border-radius: 16px;
+    margin-top: 5px;
+    z-index: 1000;
+
+    &::-webkit-scrollbar {
+      width: 6px; // ширина скроллбара
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px; // закругляем ползунок, для красоты
+      background-color: rgb(73, 73, 73); // задаём ползунку нужный цвет
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: gray; // цвет поля по которому бегает ползунок
+      margin: 8px 0;
+    }
+
+    .resultCard {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+
+      &:hover {
+        transition: all 0.4s;
+        opacity: 0.7;
+      }
+
+      .thumbnail {
+        width: 50px;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .details {
+        h4 {
+          font-size: 14px;
+          color: var(--text-color);
+          margin: 0;
+        }
+
+        p {
+          font-size: 12px;
+          color: gray;
+          margin: 2px 0 0 0;
+        }
+      }
+    }
+    p {
+      padding: 8px;
+    }
+
+    .resultCard:last-child {
+      border-bottom: none;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+}
+
+
+@media (max-width: 510px) {
+  .searchContainer {
+    width: 140px;
+    .resultCard {
+      width: 140px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent; 
+    .btn_icon {
+        width: 30px;
+        height: 30px;   
+        color: var(--text-color);
+        transition: color 0.4s;
+    }
+}

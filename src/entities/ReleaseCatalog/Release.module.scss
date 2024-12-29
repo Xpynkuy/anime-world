@@ -1,0 +1,48 @@
+.container {
+  width: auto;
+  padding: 20px;
+
+  .catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 100%;
+
+    .catalog_right {
+      width: 30%;
+      padding: 20px;
+      border-radius: 10px;
+
+      @media (max-width: 768px) {
+        width: 100%; 
+        order: -1; 
+        margin-bottom: 20px; 
+        padding: 10px;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+        color: #868686;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
+    .catalog_left {
+      width: 65%;
+      flex-grow: 1;
+      padding-right: 20px;
+
+      @media (max-width: 768px) {
+        width: 100%; 
+        padding-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .catalog {
+      flex-direction: column; 
+    }
+  }
+}

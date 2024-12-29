@@ -1,0 +1,121 @@
+.header {
+  background-color: var(--header-bg-color);
+  padding: 15px;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .menu__btn {
+      display: none; 
+      color: var(--text-color);
+      background-color: transparent;
+      margin-right: 10px;
+      height: 28px;
+      width: 28px;
+      border: none;
+      cursor: pointer;
+      svg {
+       height: 100%;
+       width: 100%;
+      }
+    }
+
+
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      margin-right: 25px;
+      color: var(--text-color);
+      text-decoration: none;
+      span {
+        color: #d87093;
+      }
+    }
+
+    .header_menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .link {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.4s;
+
+        &:hover {
+          color: #d87093;
+        }
+      }
+    }
+
+
+    .header_controls {
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      gap: 30px;
+      margin-left: auto;
+    }
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .menu__btn {
+    display: block !important;
+  }
+
+
+
+    .header_menu {
+      position: absolute; 
+      z-index: 10; 
+      top: 80px;
+      left: -200px;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      background-color: var(--header-bg-color);
+      transition: left 0.3s linear;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+      
+      .link {
+        text-align: left;
+        color: var(--text-color);
+        padding: 10px;
+        border-radius: 8px;
+    
+        
+      }
+    }
+    
+    .menu_open {
+      left: 0; 
+    }
+    
+
+  .header_menu {
+    display: none;
+  }
+
+  .menu_open {
+    display: flex; 
+  }
+}
+
+@media (max-width: 680px) {
+  .logo {
+    display: none;
+  }
+}

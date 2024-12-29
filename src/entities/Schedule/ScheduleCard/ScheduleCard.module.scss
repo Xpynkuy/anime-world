@@ -1,0 +1,71 @@
+.container {
+  margin: 15px;
+
+  .card {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: auto;
+    width: 100%; 
+    max-width: 600px; 
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    .poster {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .anime__block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1; 
+      padding: 0 10px;
+
+      .card__title {
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .data {
+        margin-top: 4px;
+        font-size: 12px;
+        color: #666;
+      }
+    }
+
+    .card__episode {
+      font-weight: bold;
+      font-size: 12px;
+      text-align: right; 
+      white-space: nowrap; 
+      max-width: 60px; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .card {
+    width: 300px;
+    align-items: center;
+  }
+}

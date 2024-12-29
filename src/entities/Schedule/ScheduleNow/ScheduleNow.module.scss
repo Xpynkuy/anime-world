@@ -1,0 +1,42 @@
+.container {
+  .schedule__section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    .schedule__item {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  h2 {
+    margin-bottom: 25px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    margin-bottom: 20px;
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: transparent;
+      color: var(--text-color);
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #444;
+      }
+
+      &.active {
+        background-color: #666;
+        color: #fff;
+        border: 1px solid #999;
+      }
+    }
+  }
+}
